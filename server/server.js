@@ -4,6 +4,7 @@ dotenv.config()
 import express from 'express'
 import cors from 'cors'
 import connectDB from './config/mongodb.js'
+import userRouter from './router/userRoutes.js'
 
 
 // app config
@@ -17,6 +18,9 @@ app.use(cors())
 
 
 // api routes
-app.get('/', (req, res) => res.send('api is working')) 
+app.get('/', (req, res) => res.send('api is working'))
+app.use('/api/user', userRouter)
+
+
 
 app.listen(PORT, () => console.log(`sever in runing on ${PORT}`))
