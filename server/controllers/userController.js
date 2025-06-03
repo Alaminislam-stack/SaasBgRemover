@@ -8,7 +8,7 @@ const clerkWebhooks = async (req, res) => {
    try {
     
     // Creat a svix 
-    const whook = new Webhook(process.env.LERK_WEBHOOKS_SECRET)
+    const whook = new Webhook(process.env.CLERK_WEBHOOKS_SECRET)
 
     await whook.verify(JSON.stringify(req.body),{
         "svix-id":req.headers["svix-id"],
