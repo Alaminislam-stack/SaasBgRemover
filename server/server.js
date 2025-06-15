@@ -15,7 +15,10 @@ await connectDB()
 
 // intialize middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: ["https://saas-bg-remover-awdy.vercel.app"], // তোমার client-এর URL
+  credentials: true,
+}))
 
 
 // api routes
