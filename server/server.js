@@ -5,6 +5,7 @@ import express from 'express'
 import cors from 'cors'
 import connectDB from './config/mongodb.js'
 import userRouter from './router/userRoutes.js'
+import imageRouter from './router/imageRoutes.js'
 
 
 // app config
@@ -20,6 +21,7 @@ app.use(cors())
 // api routes
 app.get('/', (req, res) => res.send('api is working'))
 app.use('/api/user', userRouter)
+app.use('/api/image', imageRouter)
 
 
 
