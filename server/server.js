@@ -14,9 +14,10 @@ const app = express()
 await connectDB()
 
 // intialize middlewares
+const frontendUrl = process.env.FRONTEND_URL
 app.use(express.json())
 app.use(cors({
-  origin: ["https://saas-bg-remover-awdy.vercel.app"], // তোমার client-এর URL
+  origin: [frontendUrl], // তোমার client-এর URL
   credentials: true,
 }))
 
