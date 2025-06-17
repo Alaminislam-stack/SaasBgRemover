@@ -15,9 +15,10 @@ await connectDB()
 
 // intialize middlewares
 const frontendUrl = process.env.FRONTEND_URL
+console.log(frontendUrl)
 app.use(express.json())
 app.use(cors({
-  origin: [frontendUrl], // তোমার client-এর URL
+  origin: ['https://saas-bg-remover-xvkp.vercel.app'],
   credentials: true,
 }))
 
