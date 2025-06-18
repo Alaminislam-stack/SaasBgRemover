@@ -18,7 +18,7 @@ const frontendUrl = process.env.FRONTEND_URL
 
 app.use(express.json())
 app.use(cors({
-  origin: ['https://saas-bg-remover-xvkp.vercel.app'],
+  origin: ['https://saas-bg-remover-axcp.vercel.app'],
   credentials: true,
 }))
 
