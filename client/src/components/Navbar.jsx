@@ -19,7 +19,7 @@ const Navbar = () => {
   }, [isSignedIn]);
 
   return (
-    <nav className="flex justify-between items-center py-5 lg:px-[170px] px-10">
+    <nav className="flex justify-between items-center py-5 lg:px-[170px] px-5">
       <div>
         <Link to={"/"}>
           <img src={assets.logo} alt="" className="w-[100px] lg:w-[160px] " />
@@ -27,16 +27,16 @@ const Navbar = () => {
       </div>
       <div className=" ">
         {isSignedIn ? (
-          <div className=" flex gap-5 justify-center items-center">
-            <button onClick={()=>naigate('/buy')} className="flex gap-1 justify-center items-center bg-gray-200 px-5 p-2 rounded-full text-sm cursor-pointer hover:scale-105 transition-all duration-500">
+          <div className=" flex lg:gap-5 gap-2 justify-center items-center">
+            <button onClick={()=>naigate('/buy')} className="flex gap-1 px-2 py-1 lg:px-3 lg:py-2 justify-center items-center bg-gray-200  rounded-full text-sm cursor-pointer hover:scale-105 transition-all duration-500">
               <img
                 src={assets.credit_icon}
                 alt=""
-                className=" w-[15px] h-[15px]"
+                className=" lg:w-[15px] lg:h-[15px] w-[10px] h-[10px]"
               />
-              <p>Credits : {credit}</p>
+              <p className="lg:text-[15px] text-[10px]">Credits : {credit}</p>
             </button>
-            <p>Hi, {user.firstName}</p>
+            <p className="text-sm hidden sm:block">Hi, {user.firstName}</p>
             <UserButton />
           </div>
         ) : (

@@ -73,7 +73,6 @@ const Footer = () => {
         </a>
       </div>
       </div>
-      
     </div>
      <p className="text-[#9ca3af] lg:text-sm text-[10px] font-semibold">Copyright ALamin | All right reserved.</p>
     </div>
